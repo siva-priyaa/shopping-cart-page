@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ShopEase - Account</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">🛍️ ShopEase</a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="wishlist.html">
+            ❤️ Wishlist
+            <span id="wishlist-count">0</span>
+        </a>
+
+        <a href="cart.html">
+            🛒 Cart
+            <span id="cart-count">0</span>
+        </a>
+
+        <a href="orders.html">📦 Orders</a>
+
+        <a href="account.html">👤 Account</a>
+
+        <button id="theme-btn" onclick="toggleTheme()">🌙</button>
+
+    </nav>
+
+</header>
+
+
+<main class="page-container account-page">
+
+    <h1>👤 My Account</h1>
+
+    <p class="page-subtitle">
+        Create an account or login.
+    </p>
+
+
+    <div id="auth-section" class="auth-card">
+
+        <div class="auth-tabs">
+
+            <button
+                id="login-tab"
+                class="active-tab"
+                onclick="showLogin()"
+            >
+                Login
+            </button>
+
+            <button
+                id="signup-tab"
+                onclick="showSignup()"
+            >
+                Sign Up
+            </button>
+
+        </div>
+
+
+        <div id="login-form">
+
+            <h2>Welcome Back 👋</h2>
+
+            <input
+                type="email"
+                id="login-email"
+                placeholder="Email address"
+            >
+
+            <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+            >
+
+            <button
+                class="main-action"
+                onclick="login()"
+            >
+                Login
+            </button>
+
+            <p id="login-message"></p>
+
+        </div>
+
+
+        <div
+            id="signup-form"
+            class="hidden"
+        >
+
+            <h2>Create Account ✨</h2>
+
+            <input
+                type="text"
+                id="signup-name"
+                placeholder="Full name"
+            >
+
+            <input
+                type="email"
+                id="signup-email"
+                placeholder="Email address"
+            >
+
+            <input
+                type="password"
+                id="signup-password"
+                placeholder="Create password"
+            >
+
+            <button
+                class="main-action"
+                onclick="signup()"
+            >
+                Create Account
+            </button>
+
+            <p id="signup-message"></p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="profile-section"
+        class="profile-card hidden"
+    >
+
+        <div class="profile-icon">
+            👤
+        </div>
+
+        <h2 id="profile-name">User</h2>
+
+        <p id="profile-email">
+            email@example.com
+        </p>
+
+
+        <div class="profile-actions">
+
+            <a href="orders.html">
+                📦 My Orders
+            </a>
+
+            <a href="wishlist.html">
+                ❤️ My Wishlist
+            </a>
+
+            <a href="cart.html">
+                🛒 My Cart
+            </a>
+
+        </div>
+
+
+        <button
+            class="logout-btn"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <h3>🛍️ ShopEase</h3>
+    <p>Simple. Smart. Convenient Shopping.</p>
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+</footer>
+
+
+<div id="notification" class="notification"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
